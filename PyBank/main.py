@@ -4,10 +4,8 @@ import os
 #set path to the budget_data.csv which is in the resources folder
 budget_data_path = os.path.join("Resources","budget_data.csv")
 
-#list for the change in profit/loss
+#create lists for the change in profit/loss and for date
 change_profitloss = []
-
-#list for the date
 date_profitloss = []
 
 #in the csv file
@@ -53,15 +51,20 @@ with open(budget_data_path) as budgetfile:
 
     #find greatest increase in profits
     great_profit = max(change_profitloss)
+    
     #find the year with greatest increase in profits
     great_profit_year = date_profitloss[change_profitloss.index(great_profit)]
+    
     #find greatest decrease in losses
     great_loss = min(change_profitloss)  
+    
     #find the year with greatest decrease in losses
     great_loss_year= date_profitloss[change_profitloss.index(great_loss)]
+    
     #find the average change in profit/loss
     average_change = round(sum(change_profitloss)/(len(change_profitloss)),2)
 
+    #create a list to print the financial analysis
     line = ["Financial Analysis"]
     line.append("----------------------------")
     line.append("Total Months: " + str(total_months))
