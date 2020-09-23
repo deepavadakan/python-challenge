@@ -2,8 +2,7 @@ import csv
 import os
 
 #set path to the budget_data.csv which is in the resources folder
-#csvpath = os.path.join("..","Resources","budget_data.csv")
-budget_data_path = "Resources/budget_data.csv"
+budget_data_path = os.path.join("Resources","budget_data.csv")
 
 #list for the change in profit/loss
 change_profitloss = []
@@ -12,9 +11,9 @@ change_profitloss = []
 date_profitloss = []
 
 #in the csv file
-with open(budget_data_path) as budgetfileStream:   
+with open(budget_data_path) as budgetfile:   
 
-    budgetcsvreader = csv.reader(budgetfileStream, delimiter = ",")
+    budgetcsvreader = csv.reader(budgetfile, delimiter = ",")
 
     #get the header row
     budgetcsv_header = next(budgetcsvreader)
@@ -61,14 +60,24 @@ with open(budget_data_path) as budgetfileStream:
     #find the year with greatest decrease in losses
     great_loss_year= date_profitloss[change_profitloss.index(great_loss)]
     #find the average change in profit/loss
-    average_change = sum(change_profitloss)/(len(change_profitloss))
+    average_change = round(sum(change_profitloss)/(len(change_profitloss)),2)
 
+    line = ["Financial Analysis"]
+    line.append("----------------------------")
+    line.append("Total Months: " + str(total_months))
+    line.append("Total: " + str(net_total))
+    line.append("Average  Change: " + str(average_change))
+    line.append("Greatest Increase in Profits: "+ str(great_profit_year) + " $" + str(great_profit))
+    line.append("Greatest Decrease in Profits: " + str(great_loss_year) + " $" + str(great_loss))
 
     #print analysis to terminal
-    print("Financial Analysis")
-    print("----------------------------")
-    print(f"Total Months: {total_months}")
-    print(f"Total: {net_total}")
-    print(f"Average  Change: {average_change}")
-    print(f"Greatest Increase in Profits: {great_profit_year} (${great_profit})")
-    print(f"Greatest Decrease in Profits: {great_loss_year} (${great_loss})")
+    print("\n".join(line))
+
+    #export the analysis to a text file
+    output_path = os.path.join("Analysis","Finanlcial_Analysis.txt")
+
+    with open(output_path,"w") as analysisfile:
+
+        #write the financial analysis to the file
+        analysisfile.writelines("\n".join(line))
+        
