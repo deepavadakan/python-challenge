@@ -33,3 +33,20 @@ PyPoll (Located in the PyPoll folder)
 
         The winner of the election based on popular vote.
 
+PyBoss (Located in the PyBoss folder)
+
+    Resources folder: Contains the employee_data.csv used in the script
+    Results folder: Contains converted_employee_data.csv with the newly formatted data
+    main.py: Python script able to convert employee records to the required format 
+        and outputs to the converted_employee_data.txt file found in the Results folder.
+        The required conversions are as follows:
+
+            The Name column split into separate First Name and Last Name columns.
+
+            The DOB data re-written into MM/DD/YYYY format.
+
+            The SSN data re-written such that the first five numbers are hidden from view.
+
+            The State data re-written as simple two-letter abbreviations.
+        
+    used dict from afhaque/us_state_abbrev.py for abbreviated states

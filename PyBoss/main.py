@@ -57,7 +57,7 @@ us_state_abbrev = {
 }
 
 #csv file from which to read data
-hr_data_path = os.path.join("employee_data.csv")
+hr_data_path = os.path.join("Resources","employee_data.csv")
 
 #open employee_data.csv to read
 with open(hr_data_path) as hrfileStream: 
@@ -98,7 +98,7 @@ with open(hr_data_path) as hrfileStream:
         state.append(us_state_abbrev[row[4]])
 
 #csv file to write the formatted data
-newhr_data_path = os.path.join("newemployee_data.csv")
+newhr_data_path = os.path.join("Results","converted_employee_data.csv")
 
 with open(newhr_data_path, "w") as newhrfileStream:
 
