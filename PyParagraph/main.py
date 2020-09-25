@@ -2,7 +2,7 @@ import os
 import re
 
 #set path to the election_data.csv which is in the resources folder
-paragraph_path = os.path.join("raw_data","paragraph_3.txt")
+paragraph_path = os.path.join("raw_data","paragraph_1.txt")
 
 #open the file to read the paragraph
 with open(paragraph_path) as paragraph_file:   
@@ -29,7 +29,6 @@ with open(paragraph_path) as paragraph_file:
 
             #split the paragraph into sentences
             sentences = re.split("(?<=[.!?]) +", paragraph)
-            
             sentence_count += len(sentences)
 
             #find the lengths of all words and add them

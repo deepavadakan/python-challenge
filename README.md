@@ -50,3 +50,20 @@ PyBoss (Located in the PyBoss folder)
             The State data re-written as simple two-letter abbreviations.
         
     used dict from afhaque/us_state_abbrev.py for abbreviated states
+
+PyParagraph (Located in the PyParagraph folder)
+
+    raw_data folder: Contains paragraph_1.txt and paragraph_2.txt or add your own file to check
+
+    main.py: Imports a text file filled with a paragraph of your choosing. In line 5 of the script, change "paragraph_1.txt" to "paragraph_2.txt" or any txt file. The file has to be stored in the raw_data folder
+    
+    Python script that automate the analysis of a passage and assesses the following:
+
+        Approximate word count
+
+        Approximate sentence count
+
+        Approximate letter count (per word)
+
+        Average sentence length (in words)
+        
