@@ -55,7 +55,9 @@ PyParagraph (Located in the PyParagraph folder)
 
     raw_data folder: Contains paragraph_1.txt and paragraph_2.txt or add your own file to check
 
-    main.py: Imports a text file filled with a paragraph of your choosing. In line 5 of the script, change "paragraph_1.txt" to "paragraph_2.txt" or any txt file. The file has to be stored in the raw_data folder
+    main.py: Imports a text file filled with a paragraph of your choosing. In line 5 of the script,
+    change "paragraph_1.txt" to "paragraph_2.txt" or any txt file. The file has to be stored in the
+    raw_data folder
     
     Python script that automate the analysis of a passage and assesses the following:
 
