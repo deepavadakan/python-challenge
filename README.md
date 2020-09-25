@@ -2,8 +2,9 @@
 PyBank (Located in the PyBank folder)
 
     Resources folder: Contains the budget_data.csv used in the script
-    Analysis folder: Contains FinancialAnaysis.txt that has the results from the analysis
-    main.py: Python script that analyzes the records to calculate each of the following and outputs to the terminal and to the FinancialAnalysis.txt file found in the Analysis folder:
+    Analysis folder: Contains FinancialAnaysis.txt with the results from the analysis
+    main.py: Python script that analyzes the records to calculate each of the following 
+        and outputs to the terminal and to the FinancialAnalysis.txt file found in the Analysis folder:
 
         The total number of months included in the dataset
 
@@ -18,8 +19,9 @@ PyBank (Located in the PyBank folder)
 PyPoll (Located in the PyPoll folder)
 
     Resources folder: Contains the election_data.csv used in the script
-    Analysis folder: Contains Election_Results.txt that has the results from the analysis
-    main.py: Python script that analyzes the votes and calculates each of the following and outputs to the terminal and to the Election_Results.txt file found in the Analysis folder:
+    Analysis folder: Contains Election_Results.txt with the results from the analysis
+    main.py: Python script that analyzes the votes and calculates each of the following 
+        and outputs to the terminal and to the Election_Results.txt file found in the Analysis folder:
 
         The total number of votes cast
 
