@@ -21,7 +21,7 @@ with open(election_data_path) as electionfileStream:
         #check if candidate is added to the candidates dictionary
         if row[2] in candidates:
             #add a vote for the candidate
-            candidates[row[2]] = candidates[row[2]] + 1
+            candidates[row[2]] += 1
 
         else:
             #add the candidate to the dictionary with one vote

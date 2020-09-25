@@ -32,7 +32,7 @@ with open(budget_data_path) as budgetfile:
     for row in budgetcsvreader:
         
         #calculate the total number of rows
-        total_months = total_months + 1
+        total_months += 1
 
         #get the current row's profit/loss value as integer
         current_row_profitloss = int(row[1])
